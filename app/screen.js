@@ -88,6 +88,12 @@ function updateDisplay() {
     cursor.dom.style.webkitTransform = cursor.dom.style.transform = trans;
   }
 
+  console.log(cursor)
+  var msg = document.getElementById('msging')
+  if( (cursor.x && cursor.y) === (msg.x && mag.y) ){
+    console.log('hellow world');
+  }
+
   drawing = false;
 }
 
@@ -96,5 +102,17 @@ var makeCursor = function() {
   var cursor = document.createElement('i');
   cursor.classList.add('cursor');
   document.body.appendChild(cursor);
+
+
   return cursor;
 };
+
+
+
+
+
+document.getElementsByClassName("cursor").onmouseover = function() {mouseOver()};
+
+function mouseOver() {
+  document.getElementById("test").style.color = "red";
+}

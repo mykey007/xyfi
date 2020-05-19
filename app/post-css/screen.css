@@ -61,5 +61,27 @@ body {
     & span {
       font-weight: bold;
     }
+
+    & .BigClick {
+      font-size: 54px;
+      color: salmon;
+      display: block;
+
+      & .BoxIt {
+        display: none;
+        width: 300px;
+        height: 150px;
+        background: pink;
+        border: 7px solid yellow;
+      }
+
+      & :hover > .BoxIt {
+        display: block;
+      }
+    }
   }
+}
+
+.BigClick:hover > .BoxIt {
+  display: block;
 }
